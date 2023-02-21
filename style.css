@@ -1,0 +1,252 @@
+/* General styles */
+
+body {
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  
+  /* Header styles */
+  
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    height: 70px;
+  }
+  
+  
+  .logo a {
+    font-size: 2em;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .logo img {
+    width: 80px;
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    margin-right: 20;
+  }
+  
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-right: 20px;
+    background-color: rgb(0, 0, 0);
+    display: inline-block;
+  }
+  
+  
+  
+  nav li:last-child {
+    margin-right: 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1.2em;
+  }
+  
+  nav ul li a.button {
+    display: inline-block;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
+    position: relative; /* add position relative */
+  }
+  
+  nav ul li a.button::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* position the pseudo-element below the border */
+    left: 0;
+    width: 100%;
+    height: 2px; /* set the height of the pseudo-element */
+    background-color: transparent; /* set the color of the pseudo-element */
+    box-shadow: 0 0 5px 2px #beaac8 inset; /* set the box-shadow with neon color */
+    transform: scaleX(0); /* set the initial scale to 0 */
+    transition: transform 0.3s ease-in-out; /* add a transition */
+  }
+  
+  nav ul li a.button:hover {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    text-decoration: none;
+    transform: translateY(-3px);
+    border: 4px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 8px 18px;
+  }
+  
+  nav ul li a.button:hover::after {
+    transform: scaleX(1); /* set the scale to 1 to create the neon glow effect */
+  }
+                
+  
+  
+  
+  
+  
+  /* Hero styles */
+  
+  .hero {
+    background: #f7f7f7;
+  background: -webkit-linear-gradient(0deg, #f7f7f7 0%, #bda9c7 100%);
+  background: linear-gradient(0deg, #f7f7f7 0%, #bda9c7 100%);
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(2, 0, 0);
+  }
+  
+  .hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  .hero .button {
+    display: inline-block;
+    background-color: #000000;
+    color: #fffefe;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero .button:hover {
+     background-color: #beaac8;
+     color: #000000
+  }
+  
+  .image {
+    width: 100%;
+    height: 150%;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 800px;
+    }
+  
+  /* Products styles */
+  
+  .products {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .products h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .products ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+  }
+  
+  .products li {
+    flex-basis: 300px;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .products img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .products h3 {
+    font-size: 1.5em;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .products p {
+    font-size: 1em;
+    margin: 10px;
+    text-align: justify;
+  }
+  
+  .products .button {
+    display: block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+  }
+  
+  .products .button:hover {
+    background-color: #a45ec7;
+  }
+  
+  /* About styles */
+  
+  .about {
+    padding: 50px 0;
+    text-align: justify;
+    background-color: #fff;
+  }
+  
+  .about h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .about p {
+    font-size: 1.2em;
+    margin: 10px;
+    color: #333;
+  }
+  
+  /* Footer styles */
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  }
